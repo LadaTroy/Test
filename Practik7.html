@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <link rel="stylesheet" href="стили.css" />
+    <meta charset="utf-8" />
+    <title>Портфолио</title>
+    <script>
+
+        function clickPractiki() {
+            var practiki = document.getElementById("practicki")
+            if (practiki.style.visibility == "hidden")
+                practiki.style.visibility = "unset";
+            else
+                practiki.style.visibility = "hidden";
+        }
+    </script>
+</head>
+
+<body>
+    <div class="header">
+        <a href="Index.html"><img class="ladatroy" src="Картинки/логотип белый.png" /></a>
+        <img class="menushka" onclick="clickPractiki()" src="Картинки/меню.png" />
+        <div class="practicilist" style="visibility: hidden;" id="practicki">
+            <div class="header" style="min-height: 135px;"><p style="margin:auto; color:white; font-size: 32px;">Практические работы</p></div>
+            <div class="fon2">
+                <ul class="list list2">
+                    <li>
+                        <div class="krug"><p style="margin:auto"><a href="Practik1.html">1</a></p></div>
+                    </li>
+                    <li>
+                        <div class="krug"><p style="margin:auto"><a href="Practik2.html">2</a></p></div>
+                    </li>
+                    <li>
+                        <div class="krug"><p style="margin:auto"><a href="Practik3.html">3</a></p></div>
+                    </li>
+                    <li>
+                        <div class="krug"><p style="margin:auto"><a href="Practik4.html">4</a></p></div>
+                    </li>
+                    <li>
+                        <div class="krug"><p style="margin:auto"><a href="Practik5.html">5</a></p></div>
+                    </li>
+                    <li>
+                        <div class="krug"><p style="margin:auto"><a href="Practik6.html">6</a></p></div>
+                    </li>
+                    <li>
+                        <div class="krug"><p style="margin:auto"><a href="Practik7.html">7</a></p></div>
+                    </li>
+                    <li>
+                        <div class="krug"><p style="margin:auto"><a href="Practik8_1.html">8,1</a></p></div>
+                    </li>
+                    <li>
+                        <div class="krug"><p style="margin:auto"><a href="Practik8_2.html">8,2</a></p></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <p class="bigtext">Практическая работа 7</p>
+
+    <div class="aboutMe">
+        <video width="600" height="500" autoplay loop muted style="margin-right: 100px; margin-left: 100px;">
+            <source src="Практики/7/анимация 7_1.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+        </video>
+        <p class="text">
+            В этой практическй работе отражена работа с анимацией текста и "маской" в программе Adobe Animate.<br />
+            <br />
+            
+        </p>
+    </div>
+
+    <div class="opit">
+        <div class="opitboxred">
+            <div class="opitbox">
+                <p class="bigtext" style="margin-top:0px; margin-bottom: 50px">Впечатления</p>
+                <p style="text-align:center;">
+                    Работа с маской оказалась очень простой, но интересной.<br />
+                    При этом, работа с анимацией текста не вызвала много эмоций. 
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="header">
+        <p class="bigtext" style="margin:auto;color:white">@ladatroy</p>
+        <p class="bigtext" style="margin:auto;color:white">Designed by LadaTroy</p>
+    </div>
+</body>
+</html>

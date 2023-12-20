@@ -1,0 +1,374 @@
+﻿*,
+*:before,
+*:after {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif !important;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    background: #DA0000;
+    min-height: 130px;
+    height: 100%;
+    justify-content: center;
+}
+
+.ladatroy {
+    width: 128px;
+    height: 128px;
+    margin: auto;
+}
+
+#canvas {
+    border: 3px solid black;
+}
+
+.menushka {
+    cursor:pointer;
+    top:40px;
+    right: 150px;
+    position: absolute;
+    width: 64px;
+    height: 48px;
+    margin: auto;
+}
+
+.practicilist {
+    right: 250px;
+    position: absolute;
+    min-height: 135px;
+}
+
+.krug {
+    background-image: url('Картинки/кружок.png');
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    display: flex;
+}
+    .krug p {
+        margin:auto;
+    }
+
+.fon2 {
+    background-image: url('Картинки/фонпрактики.png');
+    padding: 40px;
+}
+
+.bigtext {
+    text-align:center;
+    margin: 150px auto 100px auto;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.aboutMe {
+    margin: auto auto 200px auto;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+}
+    .aboutMe p {
+        width: 40%;
+        text-align: left;
+        font-size: 24px;
+
+        margin: auto auto auto 0px;
+    }
+    .aboutMe img {
+        display: block;
+        margin: auto;
+    }
+
+
+.naviki {
+    background: black;
+    padding:40px;
+    padding-bottom: 120px;
+}
+
+.list {
+    width: 80%;
+    margin:auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+    .list li {
+        display: flex;
+        flex-direction: column;
+        margin: 50px;
+        list-style: none;
+        counter-increment: item;
+        text-align: center;
+        min-width: 250px;
+    }
+
+    .list img {
+        margin: auto auto 30px auto;
+        text-align: center;
+        width: 128px;
+        height: 128px;
+    }
+
+    .list p {
+        font-size: 20px;
+        font-weight: 100;
+        margin: auto 0px auto 0px;
+        text-align: center;
+        color: white;
+    }
+
+.list2 {
+    max-width:500px;
+}
+    .list2 li {
+        margin: 0px;
+        min-width:0px;
+    }
+    .list2 p {
+        color:black;
+        font-size:32px;
+    }
+
+.opit {
+    background-image: url('Картинки/фон.png');
+    padding: 40px;
+    padding-bottom: 120px;
+}
+
+.opitboxred {
+    display: flex;
+    background: #DA0000;
+    border-radius: 80px;
+    margin: 50px 25% 50px 25%;
+}
+.opitbox 
+{
+    border-radius: 80px;
+    background:white;
+    margin: 50px;
+    padding: 80px;
+    font-size: 24px;
+}
+
+
+.dropdown {
+    height: 120px;
+    margin-top: 20px;
+    color: #979797;
+    padding: 0px;
+}
+
+    .dropdown p {
+        min-width: 350px;
+    }
+
+    .dropdown .head {
+        color: black;
+        margin-top: 20px;
+    }
+
+    .dropdown p.head:before {
+        content: '▼ ';
+    }
+
+    .dropdown p.head:hover:before {
+        content: '▲ ';
+    }
+
+    .dropdown:hover .content {
+        display: block;
+        position: relative;
+        height: auto;
+    }
+
+    .dropdown .content {
+        display: none;
+        width: 50%;
+        background: white;
+        cursor: pointer;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+        border-radius: 10px;
+    }
+
+        .dropdown .content hr {
+            border: 1px solid #cfcfcf;
+            margin: 0px 5px 0px 5px;
+        }
+
+        .dropdown .content p {
+            float: none;
+            color: black;
+            padding: 10px 10px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+            .dropdown .content p:hover {
+                color: white;
+                background: #6c52e4;
+                border-radius: 10px;
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+hr.aboutMe {
+    width: 100%;
+    right: 10%;
+    z-index: -1;
+    position: relative;
+    height: 5px;
+    border: 10px;
+    border-top: 4px solid #E3E3E3;
+    margin: 1em 0;
+    padding: 0;
+}
+
+div.iconer {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+div.mini {
+    transition: ease-in-out 150ms;
+    background-image: url('images/icoVK.png');
+    width: 48px;
+    margin-right: 30px;
+    height: 48px;
+    cursor: pointer;
+}
+
+div.me {
+    background-image: url('../images/Me.png');
+    width: 800px;
+}
+
+.scaler:hover {
+    transform:scale(110%);
+}
+
+
+.cent-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 80%;
+    margin: auto;
+}
+
+.horizontal {
+    display: flex;
+    flex-direction: row;
+}
+
+    .horizontal .section {
+        width: 100%;
+        display: flex;
+    }
+
+.vertical {
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    flex-direction: column;
+    padding: 30px;
+    margin: 30px;
+    border: #cdcdcd 2px solid;
+}
+
+p.head_text {
+    font-weight: 600;
+    font-size: 36px;
+    text-align: center;
+}
+
+p.body_text {
+    font-size: 24px;
+}
+
+
+.divline {
+    border-radius: 0% 25px 0% 0%;
+    background-color: #A09ABC;
+    width: 600px;
+    margin-right: 50px;
+    height: 80px;
+}
+
+p.number {
+    margin-right: 50px;
+    font-size: 100px;
+    font-weight: 900;
+    line-height: 0.9;
+}
+
+p.footer {
+    color: white;
+    width: 100%;
+    margin: auto;
+    text-shadow: 3px 4px 7px rgba(0,0,0,0.5);
+}
+
+
+
+.vidos {
+    height: 600px;
+    background: black;
+}
+
+    .vidos div {
+        width: 70%;
+        height: 100%;
+        background: white;
+        margin: auto;
+        box-shadow: 0 0 25px 3px rgba(0,0,0,0.2) inset;
+    }
+
+.review {
+    background-image: url('../images/ReviewBG.png');
+    width: 80%;
+    margin: auto;
+    border-radius:75px;
+}
+
+.rateing {
+    display: flex;
+    padding: 30px;
+    flex-direction: column;
+    background-color: #EDEDED;
+    border-radius: 25px;
+}
+    .rateing .star {
+        background-image: url('../images/star.png');
+        height: 40px;
+        width: 40px;
+        margin: auto auto auto auto;
+        padding: 25px 0px 25px 0px;
+    }
+    .rateing .light {
+        background-image: url('../images/star_light.png');
+    }

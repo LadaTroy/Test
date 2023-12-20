@@ -1,0 +1,154 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="authoring-tool" content="Adobe_Animate_CC">
+    <style>
+		#animation_container {
+			display: flex;
+			margin: auto;
+			top: 0;
+			bottom: 0;
+			width: 560px !important;
+			height: 300px !important;
+		}
+
+		#canvas {
+			display: flex;
+			width: 560px !important;
+			height: 300px !important;
+		}
+    </style>
+    <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
+    <script src="Практики/1/animatsia_1.js"></script>
+    <script>
+        var canvas, stage, exportRoot, anim_container, dom_overlay_container, fnStartAnimation;
+        function init() {
+            canvas = document.getElementById("canvas");
+            anim_container = document.getElementById("animation_container");
+            dom_overlay_container = document.getElementById("dom_overlay_container");
+            var comp = AdobeAn.getComposition("0EFF4A12BB10FC428154F0880C638A39");
+            var lib = comp.getLibrary();
+            var loader = new createjs.LoadQueue(false);
+            loader.addEventListener("fileload", function (evt) { handleFileLoad(evt, comp) });
+            loader.addEventListener("complete", function (evt) { handleComplete(evt, comp) });
+            var lib = comp.getLibrary();
+            loader.loadManifest(lib.properties.manifest);
+        }
+        function handleFileLoad(evt, comp) {
+            var images = comp.getImages();
+            if (evt && (evt.item.type == "image")) { images[evt.item.id] = evt.result; }
+        }
+        function handleComplete(evt, comp) {
+            //This function is always called, irrespective of the content. You can use the variable "stage" after it is created in token create_stage.
+            var lib = comp.getLibrary();
+            var ss = comp.getSpriteSheet();
+            var queue = evt.target;
+            var ssMetadata = lib.ssMetadata;
+            for (i = 0; i < ssMetadata.length; i++) {
+                ss[ssMetadata[i].name] = new createjs.SpriteSheet({ "images": [queue.getResult(ssMetadata[i].name)], "frames": ssMetadata[i].frames })
+            }
+            exportRoot = new lib.animatsia_1();
+            stage = new lib.Stage(canvas);
+            //Registers the "tick" event listener.
+            fnStartAnimation = function () {
+                stage.addChild(exportRoot);
+                createjs.Ticker.framerate = lib.properties.fps;
+                createjs.Ticker.addEventListener("tick", stage);
+            }
+            //Code to support hidpi screens and responsive scaling.
+            AdobeAn.makeResponsive(true, 'width', true, 1, [canvas, anim_container, dom_overlay_container]);
+            AdobeAn.compositionLoaded(lib.properties.id);
+            fnStartAnimation();
+        }
+    </script>
+
+    <link rel="stylesheet" href="стили.css" />
+    <title>Портфолио</title>
+    <script>
+        function clickPractiki() {
+            var practiki = document.getElementById("practicki")
+            if (practiki.style.visibility == "hidden")
+                practiki.style.visibility = "unset";
+            else
+                practiki.style.visibility = "hidden";
+        }
+    </script>
+</head>
+
+<body onload="init();">
+    <div class="header">
+        <a href="Index.html"><img class="ladatroy" src="Картинки/логотип белый.png" /></a>
+        <img class="menushka" onclick="clickPractiki()" src="Картинки/меню.png" />
+        <div class="practicilist" style="visibility: hidden;" id="practicki">
+            <div class="header" style="min-height: 135px;"><p style="margin:auto; color:white; font-size: 32px;">Практические работы</p></div>
+            <div class="fon2">
+                <ul class="list list2">
+                    <li>
+                        <div class="krug"><p style="margin:auto"><a href="Practik1.html">1</a></p></div>
+                    </li>
+                    <li>
+                        <div class="krug"><p style="margin:auto"><a href="Practik2.html">2</a></p></div>
+                    </li>
+                    <li>
+                        <div class="krug"><p style="margin:auto"><a href="Practik3.html">3</a></p></div>
+                    </li>
+                    <li>
+                        <div class="krug"><p style="margin:auto"><a href="Practik4.html">4</a></p></div>
+                    </li>
+                    <li>
+                        <div class="krug"><p style="margin:auto"><a href="Practik5.html">5</a></p></div>
+                    </li>
+                    <li>
+                        <div class="krug"><p style="margin:auto"><a href="Practik6.html">6</a></p></div>
+                    </li>
+                    <li>
+                        <div class="krug"><p style="margin:auto"><a href="Practik7.html">7</a></p></div>
+                    </li>
+                    <li>
+                        <div class="krug"><p style="margin:auto"><a href="Practik8_1.html">8,1</a></p></div>
+                    </li>
+                    <li>
+                        <div class="krug"><p style="margin:auto"><a href="Practik8_2.html">8,2</a></p></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <p class="bigtext">Практическая работа 1</p>
+
+    <div class="aboutMe">
+
+        <div id="animation_container" style="background-color:rgba(255, 255, 255, 1.00); width:1280px; height:720px">
+            <canvas id="canvas" width="1280" height="720" style="position: absolute; display: block; background-color:rgba(255, 255, 255, 1.00);"></canvas>
+            <div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; width:1280px; height:720px; position: absolute; left: 0px; top: 0px; display: block;">
+            </div>
+        </div>
+
+        <p class="text">
+            В этой практическй работе отражено создание покадровой анимации в программе Adobe Animate.<br />
+            Для создания анимации была выбрана милая картинка с котиком :3<br />
+            Мяу
+        </p>
+    </div>
+
+    <div class="opit">
+        <div class="opitboxred">
+            <div class="opitbox">
+                <p class="bigtext" style="margin-top:0px; margin-bottom: 50px">Впечатления</p>
+                <p style="text-align:center;">
+                    Работа в программе Adobe Animate показалась мне интересной, но поначалу очень сложной.<br />
+                    Непросто было освоить многие инструменты, а то что каждый кадр нужно располагать на новом слое было для меня открытием, однако, я считаю, что я справилась с поставленной задачей.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="header">
+        <p class="bigtext" style="margin:auto;color:white">@ladatroy</p>
+        <p class="bigtext" style="margin:auto;color:white">Designed by LadaTroy</p>
+    </div>
+</body>
+</html>
