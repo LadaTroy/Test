@@ -1,0 +1,155 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <link rel="stylesheet" href="стили.css" />
+    <meta charset="utf-8" />
+    <title>Портфолио</title>
+    <script>
+        function clickPractiki() 
+	{
+            var practiki = document.getElementById("practicki")
+            if (practiki.style.visibility == "hidden")
+                practiki.style.visibility = "unset";
+            else
+                practiki.style.visibility = "hidden";
+        }
+    </script>
+</head>
+
+<body>
+    <div class="header">
+        <a href="Index.html"><img class="ladatroy" src="Картинки/логотип белый.png" /></a>
+        <img class="menushka" onclick="clickPractiki()" src="Картинки/меню.png" />
+        <div class="practicilist"  style="visibility: hidden;" id="practicki">
+            <div class="header" style="min-height: 135px;"><p style="margin:auto; color:white; font-size: 32px;">Практические работы</p></div>
+            <div class="fon2">
+                <ul class="list list2">
+                     <li>
+                        <div class="krug"><p style="margin:auto"><a href="Practik1.html">1</a></p></div>
+                    </li>
+                    <li>
+                        <div class="krug"><p style="margin:auto"><a href="Practik2.html">2</a></p></div>
+                    </li>
+                    <li>
+                        <div class="krug"><p style="margin:auto"><a href="Practik3.html">3</a></p></div>
+                    </li>
+                    <li>
+                        <div class="krug"><p style="margin:auto"><a href="Practik4.html">4</a></p></div>
+                    </li>
+                    <li>
+                        <div class="krug"><p style="margin:auto"><a href="Practik5.html">5</a></p></div>
+                    </li>
+                    <li>
+                        <div class="krug"><p style="margin:auto"><a href="Practik6.html">6</a></p></div>
+                    </li>
+                    <li>
+                        <div class="krug"><p style="margin:auto"><a href="Practik7.html">7</a></p></div>
+                    </li>
+                    <li>
+                        <div class="krug"><p style="margin:auto"><a href="Practik8_1.html">8,1</a></p></div>
+                    </li>
+                    <li>
+                        <div class="krug"><p style="margin:auto"><a href="Practik8_2.html">8,2</a></p></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <p class="bigtext">Обо мне</p>
+
+    <div class="aboutMe">
+        <img src="Картинки/ава.png" />
+        <p class="text">
+            Приветик! Меня зовут Лада и я начинающий дизайнер.<br />
+            Я люблю все красивое, милое и котиков :3<br />
+            Со мной никогда не будет скучно, ведь во всех делах,<br />
+            у меня свой взгляд на мир.<br />
+            Любая, даже самая простая задумка со мной станет<br />
+            супер-пупер необычной.<br />
+            Я очень приветливая и понимающая, так что пишите мне 24/7, я всегда на связи.
+        </p>
+    </div>
+
+    <div class="naviki">
+        <p class="bigtext" style="color: white; margin: 100px auto 50px auto;">Навыки</p>
+        <ul class="list">
+            <li>
+                <img src="Картинки/1.png" />
+                <p>
+                    Разработка концепций<br />
+                    и идей
+                </p>
+            </li>
+            <li>
+                <img src="Картинки/2.png" />
+                <p>
+                    Работа в традиционном<br />
+                    формате
+                </p>
+            </li>
+            <li>
+                <img src="Картинки/3.png" />
+                <p>
+                    Работа в диджитал<br />
+                    формате
+                </p>
+            </li>
+            <li>
+                <img src="Картинки/4.png" />
+                <p>
+                    Работа с цветом
+                </p>
+            </li>
+            <li>
+                <img src="Картинки/5.png" />
+                <p>
+                    Работа с текстом<br />
+                    и шрифтами
+                </p>
+            </li>
+            <li>
+                <img src="Картинки/6.png" />
+                <p>
+                    Разработка проектов<br />
+                    на различных ПО
+                </p>
+            </li>
+            <li>
+                <img src="Картинки/7.png" />
+                <p>
+                    Реализация<br />
+                    концепций
+                </p>
+            </li>
+            <li>
+                <img src="Картинки/8.png" />
+                <p>
+                    Совмещение нескольких<br />
+                    задач
+                </p>
+            </li>
+        </ul>
+
+    </div>
+
+    <div class="opit">
+        <div class="opitboxred">
+            <div class="opitbox">
+                <p class="bigtext" style="margin-top:0px; margin-bottom: 50px">Опыт</p>
+                <p style="text-align:center;">
+                    Я создавала концепции фирменного стиля для строительных компаний, музыкальных групп и онлайн магазинов.<br />
+                    Разрабатывала свой собственный шрифт, открытки и визитки.<br />
+                    Представляла свои работы на выставках и даже выигрывала гран вместе со своей командой на развитие проекта в стенах вуза.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="header">
+        <p class="bigtext" style="margin:auto;color:white">@ladatroy</p>
+        <p class="bigtext" style="margin:auto;color:white">Designed by LadaTroy</p>
+    </div>
+</body>
+</html>
